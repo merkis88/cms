@@ -1,0 +1,17 @@
+{
+    "name": "xxx/cms",
+    "autoload": {
+        "psr-4": {
+            "Xxx\\Cms\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "merkis88",
+            "email": "axuenno88@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/database": "^12.0"
+    }
+}
