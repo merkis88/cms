@@ -1,8 +1,8 @@
 {
-    "name": "xxx/cms",
+    "name": "merkis88/cms",
     "autoload": {
         "psr-4": {
-            "Xxx\\Cms\\": "src/"
+            "App\\": "app/"
         }
     },
     "authors": [
@@ -12,6 +12,6 @@
         }
     ],
     "require": {
-        "illuminate/database": "^12.0"
+        "illuminate/database": "^10.0"
     }
 }
