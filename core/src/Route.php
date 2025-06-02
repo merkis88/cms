@@ -18,6 +18,9 @@ class Router
 
     public function dispatch($uri)
     {
+        // Убираем лишнюю часть пути, если проект лежит в подпапке (например /cms/public)
+        $uri = str_replace('/cms/public', '', $uri);
+
         $method = $_SERVER['REQUEST_METHOD'];
         $path = parse_url($uri, PHP_URL_PATH);
         $action = $this->routes[$method][$path] ?? null;
