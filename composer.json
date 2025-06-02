@@ -2,7 +2,8 @@
     "name": "merkis88/cms",
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Src\\": "core/"
         }
     },
     "authors": [

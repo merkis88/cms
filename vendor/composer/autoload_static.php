@@ -26,6 +26,7 @@ class ComposerStaticInitab40237bfda6e9aef95da291d5adf95a
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Contracts\\Translation\\' => 30,
             'Symfony\\Component\\Translation\\' => 30,
+            'Src\\' => 4,
         ),
         'P' => 
         array (
@@ -79,6 +80,10 @@ class ComposerStaticInitab40237bfda6e9aef95da291d5adf95a
         'Symfony\\Component\\Translation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/translation',
+        ),
+        'Src\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/core',
         ),
         'Psr\\SimpleCache\\' => 
         array (
