@@ -14,7 +14,7 @@ class AuthController
             'email' => $_POST['email'],
             'name' => $_POST['name'],
             'password' => password_hash($_POST['password'], PASSWORD_BCRYPT),
-            'role' => 'user',
+            'role' => 2,
         ]);
 
         header ('location: /login');

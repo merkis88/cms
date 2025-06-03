@@ -18,7 +18,6 @@ class Router
 
     public function dispatch($uri)
     {
-        // Убираем лишнюю часть пути, если проект лежит в подпапке (например /cms/public)
         $uri = str_replace('/public', '', $uri);
 
         $method = $_SERVER['REQUEST_METHOD'];
@@ -31,7 +30,15 @@ class Router
             return;
         }
 
+        if (is_callable($action)) {
+            // если передана анонимная функция (Closure)
+            echo call_user_func($action);
+            return;
+        }
+
+        // если передан массив: [Controller::class, 'method']
         [$class, $method] = $action;
         echo (new $class)->$method();
     }
+
 }

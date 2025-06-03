@@ -34,6 +34,10 @@ class ComposerStaticInitab40237bfda6e9aef95da291d5adf95a
             'Psr\\Container\\' => 14,
             'Psr\\Clock\\' => 10,
         ),
+        'M' => 
+        array (
+            'Models\\' => 7,
+        ),
         'I' => 
         array (
             'Illuminate\\Support\\' => 19,
@@ -96,6 +100,10 @@ class ComposerStaticInitab40237bfda6e9aef95da291d5adf95a
         'Psr\\Clock\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/clock/src',
+        ),
+        'Models\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/Models',
         ),
         'Illuminate\\Support\\' => 
         array (

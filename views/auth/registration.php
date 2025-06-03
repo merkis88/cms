@@ -8,11 +8,13 @@
     <title>Регистрация</title>
 </head>
 <body>
-    <h1>Регистрация</h1>
-    <form method="post" action="/register"></form>
-        <label>Имя: <input type="text" name="name"></label><br>
-        <label>Email: <input type="email" name="email"></label><br>
-        <label>Пароль <input type="password" name="password"></label><br>
-        <button type="submit">Зарегистрироваться</button>
+<h1>Регистрация</h1>
+
+<form method="post" action="/public/register">
+    <label>Имя: <input type="text" name="name"></label><br>
+    <label>Email: <input type="email" name="email"></label><br>
+    <label>Пароль: <input type="password" name="password"></label><br>
+    <button type="submit">Зарегистрироваться</button>
+</form>
 </body>
 </html>
