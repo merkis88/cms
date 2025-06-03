@@ -12,6 +12,7 @@
     <form method="post" action="/register"></form>
         <label>Имя: <input type="text" name="name"></label><br>
         <label>Email: <input type="email" name="email"></label><br>
-        <label>Пароль <input type="password" name="password"></label>
+        <label>Пароль <input type="password" name="password"></label><br>
+        <button type="submit">Зарегистрироваться</button>
 </body>
 </html>
