@@ -83,7 +83,7 @@ class ComposerStaticInitab40237bfda6e9aef95da291d5adf95a
         ),
         'Src\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/core',
+            0 => __DIR__ . '/../..' . '/core/src',
         ),
         'Psr\\SimpleCache\\' => 
         array (
