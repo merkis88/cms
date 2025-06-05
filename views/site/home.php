@@ -13,7 +13,7 @@
         <?php if (!$user): ?>
             <p>Вы гость. <a href="public/register">Регистрация</a> | <a href="public/login">Войти</a></p>
         <?php else: ?>
-            <p>Привет, <?= htmlspecialchars($user['login']) ?>! <a href="public/logout">Выйти</a></p>
+            <p>Привет, <?= htmlspecialchars($user['name']) ?>! <a href="public/logout">Выйти</a></p>
         <?php endif; ?>
 
         <hr>

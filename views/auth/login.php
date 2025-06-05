@@ -10,7 +10,7 @@
 <body>
 
     <h1>Авторизация</h1>
-    <form method="post" action="/login">
+    <form method="post" action="public/login">
         <label>Email:<input type="email" name="email"></label><br>
         <label>Пароль: <input type="password" name="password"></label><br>
         <button type="submit">Войти</button>

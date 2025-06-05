@@ -14,13 +14,12 @@ class AuthController
             'email' => $_POST['email'],
             'name' => $_POST['name'],
             'password' => password_hash($_POST['password'], PASSWORD_BCRYPT),
-            'role' => 2,
+            'RoleID' => 2,
         ]);
 
-        header ('location: /login');
+        header ('location: public/login');
         exit;
     }
-
     public function showLoginForm() {
         view('auth/login');
     }
@@ -32,14 +31,14 @@ class AuthController
             $_SESSION['user'] = $user->toArray();
         }
 
-        header ('location: /');
+        header ('location: /public');
         exit;
     }
 
     public function logout() {
         session_unset();
         session_destroy();
-        header('location: /');
+        header('location: /public');
         exit;
     }
 }

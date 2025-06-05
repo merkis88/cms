@@ -8,8 +8,11 @@ class User extends Model
 {
     protected $fillable = [
         'name',
-        'role',
+        'RoleID',
         'email',
-        'password'
+        'password',
+        'login'
     ];
+
+    public $timestamps = false;
 }
