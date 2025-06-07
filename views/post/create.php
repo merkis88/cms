@@ -9,7 +9,7 @@
 </head>
 <body>
 <h1>Создать пост</h1>
-    <form method="post" action="/post/store">
+    <form method="post" action="public/store">
         <label>Заголовок: <input type="text" name="title"></label><br><br>
         <label>Содержимое:</label><br>
         <textarea name="content" rows="10" cols="50"></textarea><br><br>

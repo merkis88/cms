@@ -38,5 +38,6 @@
         <small>Создано: <?= $post->created_at ?></small>
     </div>
 <?php endforeach; ?>
+
 </body>
 </html>

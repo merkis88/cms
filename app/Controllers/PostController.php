@@ -5,6 +5,16 @@ use Models\Post;
 
 class PostController
 {
+    public function index()
+    {
+        $posts = \Models\Post::orderBy('created_at', 'desc')->get();
+        $user = $_SESSION['user'] ?? null;
+
+        view('post/index', compact('posts', 'user'));
+    }
+
+
+
     public function showContentText() {
         view('post/create');
     }
