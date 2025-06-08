@@ -1,18 +1,18 @@
 <?php
 
 namespace App\Controllers;
+use Models\User;
 use Models\Post;
 
 class PostController
 {
     public function index()
     {
-        $posts = \Models\Post::orderBy('created_at', 'desc')->get();
+        $posts = User::orderBy('created_at', 'desc')->get();
         $user = $_SESSION['user'] ?? null;
 
         view('post/index', compact('posts', 'user'));
     }
-
 
 
     public function showContentText() {
@@ -30,7 +30,7 @@ class PostController
             'created_by' => $_SESSION['user']['UserID']
         ]);
 
-        header('location: public/posts');
+        header('location: public/');
     }
 
 

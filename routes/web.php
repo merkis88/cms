@@ -4,6 +4,7 @@ use Src\Router;
 use App\Controllers\AuthController;
 use App\Controllers\SiteController;
 use App\Controllers\PostController;
+use App\Controllers\AdminController;
 
 $router = new Router();
 
@@ -20,5 +21,11 @@ $router->get('/', [SiteController::class, 'home']);
 
 $router->get('/create', [PostController::class, 'showContentText']);
 $router->post('/store', [PostController::class, 'store']);
+
+$router->get('/admin', [AdminController::class, 'postList']);
+$router->get('/admin/posts/edit', [AdminController::class, 'editPost']);
+$router->post('/admin/posts/update', [AdminController::class, 'updatePost']);
+$router->get('/admin/posts/delete', [AdminController::class, 'deletePost']);
+
 
 $router->dispatch($_SERVER['REQUEST_URI']);
