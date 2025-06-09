@@ -10,5 +10,7 @@ class Post extends Model
         'content',
         'created_by'
     ];
+
+    public $timestamps = true;
 }
 

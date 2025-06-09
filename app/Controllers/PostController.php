@@ -21,7 +21,8 @@ class PostController
 
     public function store() {
         if (!isset($_SESSION['user'])) {
-            header('location: public/login');
+            header('Location: /public/login');
+            exit;
         }
 
         Post::create([
@@ -30,8 +31,10 @@ class PostController
             'created_by' => $_SESSION['user']['UserID']
         ]);
 
-        header('location: public/');
+        header('Location: /public/');
+        exit;
     }
+
 
 
 }

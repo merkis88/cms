@@ -17,9 +17,10 @@ class AuthController
             'RoleID' => 2,
         ]);
 
-        header ('location: public/login');
+        header('Location: /public/login');
         exit;
     }
+
     public function showLoginForm() {
         view('auth/login');
     }
@@ -27,19 +28,26 @@ class AuthController
     public function login() {
         $user = User::where('email', $_POST['email'])->first();
 
-        if ($user && password_verify($_POST['password'], $user->password)) {
+        echo "<pre>Пользователь из базы:\n";
+        print_r($user ? $user->toArray() : 'не найден');
+
+        if ($user && password_verify($_POST['password'], $user['password']))
+        {
             $_SESSION['user'] = $user->toArray();
+            echo "\n\n✅ Авторизация прошла. Сессия:\n";
+            print_r($_SESSION);
+        } else {
+            echo "\n\n❌ Пароль не подошёл\n";
         }
 
-        header ('location: /public');
         exit;
     }
+
 
     public function logout() {
         session_unset();
         session_destroy();
-        header('location: /public');
+        header('Location: /public');
         exit;
     }
 }
-

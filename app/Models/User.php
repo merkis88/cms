@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
 {
+    protected $primaryKey = 'UserID';
+    public $incrementing = true;
+
     protected $fillable = [
         'name',
         'RoleID',
