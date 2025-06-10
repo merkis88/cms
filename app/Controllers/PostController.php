@@ -34,7 +34,4 @@ class PostController
         header('Location: /public/');
         exit;
     }
-
-
-
 }

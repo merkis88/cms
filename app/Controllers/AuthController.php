@@ -39,10 +39,8 @@ class AuthController
         } else {
             echo "\n\n❌ Пароль не подошёл\n";
         }
-
         exit;
     }
-
 
     public function logout() {
         session_unset();
